@@ -1,6 +1,6 @@
 -- Consider the following table:
 
--- Table - Employee
+-- Table - Employees
 
 -- emp_id	name	    department	salary
 -- 1	    Bryant	    Sales	    90000
