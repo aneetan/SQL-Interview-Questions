@@ -25,3 +25,4 @@ FROM (
     GROUP BY number
     HAVING COUNT(*) = 1
 ) as largest_single_number
+
