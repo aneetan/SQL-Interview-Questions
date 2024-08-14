@@ -20,4 +20,21 @@
 -- The new table should have the columns: student_id, english, math, and science.
 
 
+SELECT student_id,
+        MAX(
+            CASE 
+                WHEN subject = 'English' THEN grade ELSE 0 END
+        ) AS english,
+        MAX(
+            CASE 
+                WHEN subject = 'Math' THEN grade ELSE 0 END
+        ) AS math,
+        MAX(
+            CASE 
+                WHEN subject = 'Science' THEN grade ELSE 0 END
+        ) AS science,
 
+
+FROM Students
+
+GROUP BY student_id
