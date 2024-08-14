@@ -23,7 +23,8 @@ WHERE ROWID NOT IN (
             ELSE destination || source
         END,
         distance 
-)
+);
+
 
 SELECT * FROM Travel
 
