@@ -15,3 +15,11 @@
 -- customers paid in a seven days window (i.e., current day + 6 days before).
 
 -- Here, average_amount should be rounded to two decimal places.
+
+SELECT visited_on,
+Round( AVG(amount) OVER(
+    ORDER BY visited_on
+    ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+), 2 )
+ as average_amount
+ FROM Customers
